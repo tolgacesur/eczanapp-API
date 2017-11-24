@@ -41,8 +41,8 @@ class NobetciEczane {
 			$this->verilerArray[$i]["eczaneAdi"] = strip_tags(trim($basliklar[1][$i])); // başlığı ata
 			$bol = explode("Telefon:",strip_tags(trim($detaylar[1][$i-2])));
 			$bol[0]= ltrim($bol[0] , "Adres:");
-			$this->verilerArray[$i]["eczaneSemt"] = $bol[0];
-			$this->verilerArray[$i]["eczaneAdres"] = $bol[1]; 
+			$this->verilerArray[$i]["eczaneAdres"] = $bol[0];
+			$this->verilerArray[$i]["eczaneTelefon"] = $bol[1]; 
 		}
 		
 	}
