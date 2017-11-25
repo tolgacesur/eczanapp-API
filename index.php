@@ -11,15 +11,14 @@ $app->get('/', function(Request $request, Response $response){
     $response->getBody()->write('api yapım aşamasında');
 });
 
-
-
 $app->get('/pharmacy/{city}', function (Request $request, Response $response) {
     
-    $city = $request->getAttribute('city'); // getter method
+    $city = $request->getAttribute('city'); // get url parameter
     $pharmacy = new NobetciEczane($city);
     $pharmacy = $pharmacy->Getir("json"); // turn json
     $response->getBody()->write($pharmacy);
 
     return $response;
 });
+
 $app->run();
