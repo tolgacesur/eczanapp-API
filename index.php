@@ -6,6 +6,13 @@ require 'vendor/autoload.php';
 require_once("NobetciEczane.class.php");
 
 $app = new \Slim\App;
+
+$app->get('/', function(Request $request, Response $response){
+    $response->getBody()->write('api yapım aşamasında');
+});
+
+
+
 $app->get('/pharmacy/{city}', function (Request $request, Response $response) {
     
     $city = $request->getAttribute('city'); // getter method
