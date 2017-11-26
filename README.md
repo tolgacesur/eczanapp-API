@@ -51,5 +51,5 @@ Return  :+1:
 Bu serviste [Vehbi Akdoğan](http://vehbiakdogan.com)'ın Php ile Günlük Nöbetçi Eczane Listesini Json,Text,Array Olarak Veren [Php Sınıfı](https://github.com/vehbiakdogan/NobetciEczane) kullanılmıştır.
 
 
-* Bu serviste veriler [hastahanebul.com.tr](hastahanebul.com.tr) adresinden alınmaktadır.
+* Bu serviste veriler [hastanebul.com.tr](http://hastanebul.com.tr) adresinden alınmaktadır.
 * İstek, şikayet ve öneriler için lütfen iletişime geçin!
