@@ -12,26 +12,6 @@
 </head>
 
 <body>
-    <div id="targetDiv"></div>
-
-    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.0.1/dist/showdown.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-
-    <script type='text/javascript'>
-
-        var data = "";
-        $.get("https://raw.githubusercontent.com/tolgacesur/eczanapp-API/master/README.md", function (response) {
-            data = response;
-            var text = data;
-            target = document.getElementById('targetDiv'),
-                converter = new showdown.Converter(),
-                html = converter.makeHtml(text);
-            console.log(text);
-            target.innerHTML = html;
-        });
-
-    </script>
+    <script src="https://gist.github.com/tolgacesur/4ca80143775342e3c629bb113b788520.js"></script>
 </body>
 </html>
