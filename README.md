@@ -1,7 +1,7 @@
-# [Nöbetçi Eczane Bulma Servisi](http://eczanapp.space)
+# [Nöbetçi Eczane Bulma Servisi](http://api.eczanapp.space)
 ## API Dökümantasyonu ve Kaynak Kodu
 
-### [http://eczanapp.space](http://eczanapp.space)
+### [Uygulama](http://eczanapp.space)
 
 Özellikler:
 
