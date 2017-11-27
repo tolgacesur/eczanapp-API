@@ -1,4 +1,4 @@
-# Nöbetçi Eczane Bulma Servisi
+# [Nöbetçi Eczane Bulma Servisi](http://eczanapp.space)
 ## API Dökümantasyonu ve Kaynak Kodu
 
 ### [http://eczanapp.space](http://eczanapp.space)
@@ -10,7 +10,7 @@
 
 ## Kullanımı
 
-API base URL : `http://eczanapp.space`
+API base URL : `http://api.eczanapp.space`
 
 ### Web API Endpoint Reference:
 
@@ -26,7 +26,7 @@ GET | /pharmacy/{cityName} | JSON
 
 
  ```url
- http://eczanapp.space/pharmacy/ankara
+ http://api.eczanapp.space/pharmacy/ankara
  ````
 
 Return  :+1:
