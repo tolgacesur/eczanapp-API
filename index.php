@@ -6,6 +6,12 @@ use Slim\Views\PhpRenderer;
 require 'vendor/autoload.php';
 require_once("NobetciEczane.class.php");
 
+header('Access-Control-Allow-Origin: * ');
+header("Access-Control-Allow-Credentials: true");
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+header('Access-Control-Max-Age: 1000');
+header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
+
 /* 404 ERROR*/
 $c = new \Slim\Container();
 $c['notFoundHandler'] = function ($c) {
