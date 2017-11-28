@@ -3,6 +3,8 @@
 * 	@author: Vehbi AKDOGAN
 * 	@mail: mf.leqelyy@gmail.com || info@vehbiakdogan.com
 * 	@website: vehbiakdogan.com
+*
+*	@Editor: Tolga CESUR
 */
 class NobetciEczane {
 	
