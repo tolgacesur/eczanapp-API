@@ -8,7 +8,8 @@ class NobetciEczane {
 	
 	private $sehir; // Girilecek İl
 	private $gelenVeri; // Çektiğimiz Veriler
-	private $verilerArray = array(); // göndereceğimiz jSon Veya Dizi Türünde Parametre
+	private $verilerArray = array(); 
+	private $gidenArray = array(); // göndereceğimiz jSon Veya Dizi Türünde Parametre
 	
 	
 	
@@ -38,11 +39,13 @@ class NobetciEczane {
 		
 		for($i=2;$i<count($basliklar[1]);$i++) {
 			
-			$this->verilerArray[$i]["eczaneAdi"] = strip_tags(trim($basliklar[1][$i])); // başlığı ata
+			$this->verilerArray["eczaneAdi"] = strip_tags(trim($basliklar[1][$i])); // başlığı ata
 			$bol = explode("Telefon:",strip_tags(trim($detaylar[1][$i-2])));
 			$bol[0]= ltrim($bol[0] , "Adres:");
-			$this->verilerArray[$i]["eczaneAdres"] = $bol[0];
-			$this->verilerArray[$i]["eczaneTelefon"] = $bol[1]; 
+			$this->verilerArray["eczaneAdres"] = $bol[0];
+			$this->verilerArray["eczaneTelefon"] = $bol[1]; 
+
+			array_push($this->gidenArray, $this->verilerArray);
 		}
 		
 	}
@@ -60,7 +63,7 @@ class NobetciEczane {
 	public function Getir($type="array") {
 		if($type == "json") {
 			
-			return json_encode($this->verilerArray);
+			return json_encode($this->gidenArray);
 			
 		}else if($type == "text") {
 			$metin="";
