@@ -38,12 +38,31 @@ class NobetciEczane {
 		$verilerArray[0] = 0;  //id
 		
 		for($i=2;$i<count($basliklar[1]);$i++) {
-			
-			$this->verilerArray["eczaneAdi"] = strip_tags(trim($basliklar[1][$i])); // başlığı ata
+
+			$head = strip_tags(trim($basliklar[1][$i]));
+
+			if (stripos($head, " - ") !== false) {
+				$dilimler = explode(" - ", $head);
+				$this->verilerArray["eczaneAdi"] = $dilimler[1]; // başlığı ata
+				$this->verilerArray["eczaneIlce"] = $dilimler[0];
+			} else {
+				$this->verilerArray["eczaneAdi"] = $head; // başlığı ata
+			}
+	
 			$bol = explode("Telefon:",strip_tags(trim($detaylar[1][$i-2])));
 			$bol[0]= ltrim($bol[0] , "Adres:");
 			$this->verilerArray["eczaneAdres"] = $bol[0];
-			$this->verilerArray["eczaneTelefon"] = $bol[1]; 
+			
+			$phone = $bol[1]; 
+
+			if (stripos($phone, " Harita'da görmek için tıklayınız.") !== false) {
+				$dilimler2 = explode(" Harita'da görmek için tıklayınız.", $phone);
+				$this->verilerArray["eczaneTelefon"] = $dilimler2[0];
+			} else {
+				$this->verilerArray["eczaneTelefon"] = $phone;
+			}
+
+			 
 
 			array_push($this->gidenArray, $this->verilerArray);
 		}
