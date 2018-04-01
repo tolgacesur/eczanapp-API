@@ -1,10 +1,16 @@
 <?php
+/**
+*   @author: Tolga CESUR
+*   @website: tolgacesur.com
+*   @website : api.eczanapp.space
+*
+*/
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use Slim\Views\PhpRenderer;
 
 require 'vendor/autoload.php';
-require_once("NobetciEczane.class.php");
+require_once("Eczane.php");
 
 header('Access-Control-Allow-Origin: * ');
 header("Access-Control-Allow-Credentials: true");
@@ -34,8 +40,8 @@ $app->get('/', function(Request $request, Response $response){
 $app->get('/pharmacy/{city}', function (Request $request, Response $response) {
     
     $city = $request->getAttribute('city'); // get url parameter
-    $pharmacy = new NobetciEczane($city);
-    $pharmacy = $pharmacy->Getir("json"); // turn json
+    $pharmacy = new Eczane($city);
+    $pharmacy = $pharmacy->getPharmacy(); // turn json
     $response->getBody()->write($pharmacy);
 
     return $response;

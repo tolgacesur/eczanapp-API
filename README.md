@@ -6,6 +6,7 @@
 Özellikler:
 
  * Şehre göre arama
+ * Latitude ve Longitude değerleri
 
 
 ## Kullanımı
@@ -32,24 +33,29 @@ GET | /pharmacy/{cityName} | JSON
 Return  :+1:
 
 ```json
-{
-  "2": {
-    "eczaneAdi": " Yılmaz Eczanesi",
-    "eczaneAdres": " Menderes Bulvarı Sağlık 1. Sok. No:2 Hasanoğlan /Elmadağ/ Ankara",
-    "eczaneTelefon": " +903128663771"
+ {
+    "name": "Boncuk Eczanesi",
+    "district": "Çankaya",
+    "address": "3. Cad. No:47 / A Bahçelievler /",
+    "lat": 39.9273064,
+    "lng": 32.8268946
   },
-  "3": {
-    "eczaneAdi": " Özlem Eczanesi",
-    "eczaneAdres": " Yeni Mah. 305 Sok. No:8/A Merkez/ Kırıkkale",
-    "eczaneTelefon": " +903182244999"
+  {
+    "name": "Cemile Gül Eczanesi",
+    "district": "Çankaya",
+    "address": "Göktürk Mah. 115. Cad. No:6 / 15 Seyranbağları /",
+    "lat": 39.9117223,
+    "lng": 32.8715051
+  },
+  {
+    "name": "Akkılıç Eczanesi",
+    "district": "Çankaya",
+    "address": "Ziya Gökalp Cad. No:62 / A Kolej /",
+    "lat": 39.924801,
+    "lng": 32.863478
   }
-}
 ```
 
 ## Hakkında
 
-Bu serviste [Vehbi Akdoğan](http://vehbiakdogan.com)'ın Php ile Günlük Nöbetçi Eczane Listesini Json,Text,Array Olarak Veren [Php Sınıfı](https://github.com/vehbiakdogan/NobetciEczane) kullanılmıştır.
-
-
-* Bu serviste veriler [hastanebul.com.tr](http://hastanebul.com.tr) adresinden alınmaktadır.
 * İstek, şikayet ve öneriler için lütfen iletişime geçin!
